@@ -5,7 +5,17 @@
   "projects": {
     "intern-book-app": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "standalone": false
+        },
+        "@schematics/angular:directive": {
+          "standalone": false
+        },
+        "@schematics/angular:pipe": {
+          "standalone": false
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -98,6 +108,6 @@
     }
   },
   "cli": {
-    "analytics": "3c74e8da-bec2-4b4c-b6d5-322a463b2135"
+    "analytics": "eae31186-eacd-4f07-a295-d4671d82b788"
   }
 }
