@@ -9,7 +9,8 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
   imports:[
     RouterOutlet,
     BooklistComponent,
-  ToolbarComponent,],
+    ToolbarComponent,
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
