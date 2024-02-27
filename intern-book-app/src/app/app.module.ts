@@ -11,8 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BooklistComponent } from './pages/booklist/booklist.component';
 
 @NgModule({
-declarations: [
-],
+declarations: [],
 imports: [
     BrowserModule,
     MatCardModule,
