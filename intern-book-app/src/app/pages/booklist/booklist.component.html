@@ -1,33 +1,40 @@
-import { Component, Input } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatInputModule} from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
-import { ToolbarComponent } from '../../components/toolbar/toolbar.component';
-import { BOOKS } from '../../types/mock-books';
-import { Book } from '../../types/book';
-import { NgFor, NgIf } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { BookinformationComponent } from '../../components/bookinformation/bookinformation.component';
+<!-- tool bar -->
 
-@Component({
-  selector: 'app-booklist',
-  standalone: true,
-  imports: [
-    MatCardModule,
-    MatToolbarModule,
-    MatInputModule,
-    MatButtonModule,
-    ToolbarComponent,
-    BookinformationComponent,
-    NgIf,
-    NgFor,
-    FormsModule, 
-  ],
-  templateUrl: './booklist.component.html',
-  styleUrl: './booklist.component.css'
-})
-export class BooklistComponent {
-  
-}
+<mat-toolbar color="primary">
+  <!-- <app-toolbar></app-toolbar> -->
+  <span>読んだ本 </span>
+  <span class="text-right">一覧</span> 
+</mat-toolbar>
+<br>
 
+<!-- main card -->
+<mat-card class = "card-width">
+  <mat-card-content >
+      <mat-card-title >書籍登録</mat-card-title>
+      <form class="book-form">
+      <mat-form-field class="full-width">
+          <mat-label>書籍名</mat-label>
+          <input matInput>
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+          <mat-label>あらすじ</mat-label>
+          <textarea matInput placeholder=" "></textarea>
+      </mat-form-field>
+
+      <mat-form-field class="short-width">
+          <mat-label>評価点</mat-label>
+          <input matInput>
+      </mat-form-field>
+
+      </form>
+  </mat-card-content>
+
+  <mat-card-actions align="end">
+      <button mat-raised-button color="primary">追加</button>
+  </mat-card-actions>
+
+</mat-card>
+<br>
+<!-- book information with card -->
+<app-bookinformation></app-bookinformation>

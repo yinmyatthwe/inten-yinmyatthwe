@@ -14,6 +14,7 @@ import { BooklistComponent } from './pages/booklist/booklist.component';
 declarations: [
   //  AppComponent,
 ],
+declarations: [],
 imports: [
     BrowserModule,
     MatCardModule,
