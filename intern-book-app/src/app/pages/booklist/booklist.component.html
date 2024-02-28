@@ -38,7 +38,19 @@
 
 <br>
 <!-- booklist with card -->
-<mat-card class = "card-width" *ngFor=" let book of books">
+<mat-card class="card-width" *ngFor="let book of books">
+    <mat-card-content>
+        <mat-card-title >{{book.name}}</mat-card-title>
+    </mat-card-content>
+    <mat-card-actions align="end">
+        <button mat-raised-button color="warn" [class.selected]="book === selectedBook"
+        (click)="onSelect(book)">
+            削除</button>
+    </mat-card-actions>
+</mat-card>
+<div *ngIf="book">
+{{book.detail}}</div>
+<!-- <mat-card class = "card-width" *ngFor=" let book of books">
     <mat-card-content >
         <mat-card-title >{{book.name}}</mat-card-title>
         <p class="detail">
@@ -51,6 +63,7 @@
     <mat-card-actions align="end">
         <button mat-raised-button color="warn">削除</button>
     </mat-card-actions>
-</mat-card>
+</mat-card> -->
+
 
 
