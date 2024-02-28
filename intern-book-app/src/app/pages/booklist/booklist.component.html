@@ -35,22 +35,9 @@
     </mat-card-actions>
 
 </mat-card>
-
 <br>
-<!-- booklist with card -->
-<mat-card class = "card-width" *ngFor=" let book of books">
-    <mat-card-content >
-        <mat-card-title >{{book.name}}</mat-card-title>
-        <p class="detail">
-        {{book.detail}}
-        </p>
-        <p class="evaluation">
-        評価 :{{book.evaluation}}点
-        </p>
-    </mat-card-content>
-    <mat-card-actions align="end">
-        <button mat-raised-button color="warn">削除</button>
-    </mat-card-actions>
-</mat-card>
+<!-- book information with card -->
+<app-bookinformation></app-bookinformation>
+
 
 

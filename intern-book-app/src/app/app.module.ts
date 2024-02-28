@@ -9,6 +9,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { AppRoutingModule } from './app-routing.module';
 import { BooklistComponent } from './pages/booklist/booklist.component';
+import { BookinformationComponent } from './components/bookinformation/bookinformation.component';
 
 @NgModule({
 declarations: [],
