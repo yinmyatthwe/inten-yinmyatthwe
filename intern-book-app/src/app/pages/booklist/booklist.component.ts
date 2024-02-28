@@ -28,9 +28,5 @@ import { BookinformationComponent } from '../../components/bookinformation/booki
   styleUrl: './booklist.component.css'
 })
 export class BooklistComponent {
-  //books=BOOKS;
+  
 }
-
-
-
-
