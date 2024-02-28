@@ -12,6 +12,7 @@ import { BooklistComponent } from './pages/booklist/booklist.component';
 
 @NgModule({
 declarations: [
+  //  AppComponent,
 ],
 imports: [
     BrowserModule,
@@ -22,8 +23,9 @@ imports: [
     MatInputModule,
     MatButtonModule,
     AppRoutingModule,
-    AppComponent,
     BooklistComponent,
+    AppComponent,
+
 ],
 providers: [
     provideAnimationsAsync()
