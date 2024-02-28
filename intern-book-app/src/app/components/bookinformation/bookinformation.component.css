@@ -1,15 +1,4 @@
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
-.book-form{
-    width: 100%;
-
-}
-.full-width{
-    width:90%;
-}
-
-.short-width{
-    width: 50%;
-}
 .card-width{
     margin:auto;
     width: 90%;
@@ -30,4 +19,3 @@
 .text-right{
     margin: 0 0 0 auto;
 }
-
