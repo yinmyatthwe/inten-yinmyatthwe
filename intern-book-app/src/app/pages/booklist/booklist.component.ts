@@ -37,12 +37,13 @@ export class BooklistComponent implements OnInit{
   
   getBook():void{
     this.bookService.getBook().subscribe(books=>this.books=books);
-    console.log("AAAA");
-    console.log(this.book);
   }
+
   insertBook(){
-    this.bookService.insertBook(this.book);
-    this.book=new BookData();
+    if(this.book.name!=null)
+    { 
+      this.bookService.insertBook(this.book);
+      this.book=new BookData();    
+    }
   }
-  
 }

@@ -8,16 +8,18 @@ import { BOOKS } from '../types/mock-books';
   providedIn: 'root'
 })
 export class BookService {
-books = BOOKS;
+  books = BOOKS;
+  message="string";
   constructor(private httpclient:HttpClient) { }
+
   getBook():Observable<Book[]>{
     const books = of(BOOKS);
     return books;
   }
+
   insertBook(bookData:any){
     this.books.push(bookData);
-    // return book.push(bookData);
-  //return this.httpclient.post('http://localhost:4200/',bookData)
-  return this.books;
+    return this.books;
   }
+
 }
