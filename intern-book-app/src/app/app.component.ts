@@ -5,7 +5,6 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 
 @Component({
   selector: 'app-root',
-  standalone:true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

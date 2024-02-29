@@ -1,5 +1,5 @@
-<!-- tool bar -->
 
+<!-- tool bar -->
 <mat-toolbar color="primary">
     <!-- <app-toolbar></app-toolbar> -->
     <span>読んだ本 </span>
@@ -11,30 +11,32 @@
 <mat-card class = "card-width">
     <mat-card-content >
         <mat-card-title >書籍登録</mat-card-title>
-        <form class="book-form">
+        <form class="book-form" (ngSubmit)="insertBook()">
         <mat-form-field class="full-width">
             <mat-label>書籍名</mat-label>
-            <input matInput>
+            <input matInput name="name" [(ngModel)]="book.name">
         </mat-form-field>
 
         <mat-form-field class="full-width">
             <mat-label>あらすじ</mat-label>
-            <textarea matInput placeholder=" "></textarea>
+            <textarea matInput placeholder=" " name="detail" [(ngModel)]="book.detail" ></textarea>
         </mat-form-field>
 
         <mat-form-field class="short-width">
             <mat-label>評価点</mat-label>
-            <input matInput>
+            <input matInput name="evaluation" [(ngModel)]="book.evaluation" >
         </mat-form-field>
 
+        <br>
+        <mat-card-actions align="end">
+            <button mat-raised-button color="primary" >追加</button>
+        </mat-card-actions>
         </form>
     </mat-card-content>
 
-    <mat-card-actions align="end">
-        <button mat-raised-button color="primary">追加</button>
-    </mat-card-actions>
 
 </mat-card>
 <br>
+
 <!-- book information with card -->
 <app-bookinformation></app-bookinformation>
