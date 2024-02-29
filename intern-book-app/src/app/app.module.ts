@@ -9,10 +9,17 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { AppRoutingModule } from './app-routing.module';
 import { BooklistComponent } from './pages/booklist/booklist.component';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule,Routes } from '@angular/router';
 
+
+const routes:Routes=[
+    {path:'',component:BooklistComponent}
+];
 @NgModule({
 declarations: [
-  //  AppComponent,
+    AppComponent,
 ],
 imports: [
     BrowserModule,
@@ -24,12 +31,14 @@ imports: [
     MatButtonModule,
     AppRoutingModule,
     BooklistComponent,
-    AppComponent,
+    ToolbarComponent,
+    HttpClientModule,
+    RouterModule.forRoot(routes),
 
 ],
 providers: [
     provideAnimationsAsync()
 ],
-bootstrap: []
+bootstrap: [AppComponent]
 })
 export class AppModule { }
