@@ -1,0 +1,33 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+.book-form{
+    width: 100%;
+
+}
+.full-width{
+    width:90%;
+}
+
+.short-width{
+    width: 50%;
+}
+.card-width{
+    margin:auto;
+    width: 90%;
+}
+.detail{
+    font-size: 15px;
+    font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+
+.evaluation{
+    font-size: 15px;
+    font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+.text-right{
+    margin: 0 0 0 auto;
+}
+
