@@ -22,4 +22,9 @@ export class BookService {
     return this.books;
   }
 
+  deleteBook(bookData:any){
+    this.books.pop();
+    return this.books;
+  }
+
 }

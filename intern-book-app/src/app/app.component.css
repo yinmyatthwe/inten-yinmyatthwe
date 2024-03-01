@@ -1,0 +1,61 @@
+:host {
+
+
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+    font-size: 3.125rem;
+    color: white;
+    background: blue;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.125rem;
+    margin: 0;
+    font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+
+p {
+    margin: 0;
+    color: var(--gray-700);
+}
+
+main {
+    width: 100%;
+    min-height: 100%;
+    /* display: flex; */
+    /* justify-content: center; */
+    align-items: center;
+    padding: 1rem;
+    box-sizing: inherit;
+    position: relative;
+}
+
+.book-list{
+    margin-top: 1.5rem;   
+}
+
+.book-info{
+    margin-top: 1rem;
+}
+
+.book-cmt{
+    margin-top: 1rem;
+}
+
+.book-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+.book-label {
+    width: 100%;
+    margin-left: 1rem;
+}

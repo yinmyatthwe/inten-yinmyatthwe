@@ -6,6 +6,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { ToolbarComponent } from '../toolbar/toolbar.component';
 import { NgIf,NgFor } from '@angular/common';
+import { BookService } from '../../service/book.service';
+import { BookData } from '../../types/book';
 
 @Component({
   standalone: true,
@@ -26,5 +28,11 @@ import { NgIf,NgFor } from '@angular/common';
 
 export class BookinformationComponent {
   @Input() books=BOOKS;
+  book=new BookData();
+  constructor(private bookService:BookService){}
   
+  deleteBook(book:any){
+    this.bookService.deleteBook(book);
+    
+  }
 }
