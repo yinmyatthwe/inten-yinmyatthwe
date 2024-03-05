@@ -5,21 +5,26 @@ import { Book } from '../types/book';
 import { BOOKS } from '../types/mock-books';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class BookService {
-  books = BOOKS;
-  message="string";
-  constructor(private httpclient:HttpClient) { }
+    books = BOOKS;
+    message="string";
+    constructor(private httpclient:HttpClient) { }
 
-  getBook():Observable<Book[]>{
+    getBook():Observable<Book[]>{
     const books = of(BOOKS);
     return books;
-  }
+    }
 
-  insertBook(bookData:any){
+    insertBook(bookData:any){
     this.books.push(bookData);
     return this.books;
-  }
+    }
+
+    deleteBook(bookData:any){
+        this.books.pop();
+        return this.books;
+    }
 
 }
