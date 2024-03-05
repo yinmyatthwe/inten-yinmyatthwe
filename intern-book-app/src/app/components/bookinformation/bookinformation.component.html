@@ -1,15 +1,29 @@
 <!-- booklist with card -->
-<mat-card class = "card-width" *ngFor=" let book of books">
-    <mat-card-content >
-        <mat-card-title >{{book.name}}</mat-card-title>
-        <p class="detail">
-        {{book.detail}}
-        </p>
-        <p class="evaluation">
-        評価 :{{book.evaluation}}点
-        </p>
-    </mat-card-content>
-    <mat-card-actions align="end">
-        <button mat-raised-button color="warn" (click)="deleteBook(book)">削除</button>
-    </mat-card-actions>
-</mat-card>
+<ng-template [ngIf]="books&& books.length > 0" [ngIfElse]="noBook">
+    <div class="book-list">
+        <mat-card class = "card-width" *ngFor=" let book of books">
+            <mat-card-header>
+                <mat-card-title>
+                    {{ book.name }}
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                {{ book.detail }}
+            </mat-card-content>
+            <mat-card-content>
+                評価:{{ book.evaluation }}点
+            </mat-card-content>
+            <mat-card-actions align="end">
+                <button mat-raised-button color="warn" (click)="deleteBook(book)">削除</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</ng-template>
+
+<ng-template #noBook>
+    <p>「データがありません」</p>
+    
+</ng-template>
+
+
+
