@@ -37,7 +37,9 @@ import {
 
 export class BookinformationComponent {
   @Input() books=BOOKS;
+  
   book=new BookData();
+  
   constructor(public dialog:MatDialog){}
 
   openDialog(book:any):void{
