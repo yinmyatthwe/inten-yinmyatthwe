@@ -1,0 +1,8 @@
+<h2 mat-dialog-title>Delete file</h2>
+<mat-dialog-content>
+    {{book.name}}を削除します。よろしいですか？
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button mat-dialog-close>いいえ</button>
+    <button mat-button mat-dialog-close (click)="deleteBook(book)" >はい</button>
+</mat-dialog-actions>
