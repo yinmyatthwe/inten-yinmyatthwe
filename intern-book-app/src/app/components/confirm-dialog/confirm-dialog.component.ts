@@ -11,8 +11,6 @@ import {MatButtonModule} from '@angular/material/button';
 import { BookService } from '../../service/book.service';
 import { BookData } from '../../types/book';
 
-
-
 @Component({
   standalone:true,
   selector: 'app-confirm-dialog',
@@ -34,7 +32,6 @@ export class ConfirmDialogComponent {
   constructor(private bookService:BookService , public dialogRef: MatDialogRef<ConfirmDialogComponent>) {}
 
   deleteBook(book:any){
-    this.bookService.deleteBook(book);
-    
+    this.bookService.deleteBook(book); 
   }
 }
