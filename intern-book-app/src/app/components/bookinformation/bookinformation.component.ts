@@ -32,7 +32,7 @@ export class BookinformationComponent {
   constructor(private bookService:BookService){}
   
   deleteBook(book:any){
-    if(confirm("「本名」を削除します。よろしいですか？　")){
+    if(confirm(book.name+"を削除します。よろしいですか？　")){
     this.bookService.deleteBook(book);
     }
   }
