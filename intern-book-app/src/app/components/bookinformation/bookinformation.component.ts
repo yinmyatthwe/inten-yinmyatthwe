@@ -35,6 +35,5 @@ export class BookinformationComponent {
     if(confirm("「本名」を削除します。よろしいですか？　")){
     this.bookService.deleteBook(book);
     }
-    
   }
 }
