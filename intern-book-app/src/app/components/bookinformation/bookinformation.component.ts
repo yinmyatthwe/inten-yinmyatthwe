@@ -17,6 +17,9 @@ import {
   MatDialogTitle,
   MatDialogContent,
 } from '@angular/material/dialog';
+import { BookService } from '../../service/book.service';
+import { Observable } from 'rxjs';
+
 
 @Component({
   standalone: true,
@@ -37,7 +40,6 @@ import {
 
 export class BookinformationComponent {
   @Input() books=BOOKS;
-
   book=new BookData();
   
   constructor(public dialog:MatDialog,private bookService:BookService){}
@@ -49,5 +51,6 @@ export class BookinformationComponent {
         this.bookService.deleteBook(book);
       }
     });
+    
   }
 }

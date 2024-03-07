@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';import { provideAnimationsAsync }
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
-import { AppRoutingModule } from './app-routing.module';
 import { BooklistComponent } from './pages/booklist/booklist.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -30,7 +29,6 @@ imports: [
     MatToolbarModule,
     MatInputModule,
     MatButtonModule,
-    AppRoutingModule,
     BooklistComponent,
     ToolbarComponent,
     HttpClientModule,
