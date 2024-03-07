@@ -6,8 +6,19 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { ToolbarComponent } from '../toolbar/toolbar.component';
 import { NgIf,NgFor } from '@angular/common';
-import { BookService } from '../../service/book.service';
+import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
 import { BookData } from '../../types/book';
+import {
+  MatDialog,
+  MatDialogRef,
+  MatDialogActions,
+  MatDialogClose,
+  MatDialogTitle,
+  MatDialogContent,
+} from '@angular/material/dialog';
+import { BookService } from '../../service/book.service';
+import { Observable } from 'rxjs';
+
 
 @Component({
   standalone: true,
@@ -28,12 +39,18 @@ import { BookData } from '../../types/book';
 
 export class BookinformationComponent {
   @Input() books=BOOKS;
-  book=new BookData();
-  constructor(private bookService:BookService){}
   
+  book=new BookData();
+  
+  constructor(public dialog:MatDialog,private bookService:BookService){}
+
   deleteBook(book:any){
-    if(confirm(book.name+"を削除します。よろしいですか？　")){
-    this.bookService.deleteBook(book);
-    }
+    const confirmDialog= this.dialog.open(ConfirmDialogComponent);
+    confirmDialog.afterClosed().subscribe(result=>{
+      if(result===true){
+        this.bookService.deleteBook(book);
+      }
+    });
+      
   }
 }
