@@ -16,6 +16,8 @@ import {
   MatDialogTitle,
   MatDialogContent,
 } from '@angular/material/dialog';
+import { BookService } from '../../service/book.service';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -40,9 +42,15 @@ export class BookinformationComponent {
   
   book=new BookData();
   
-  constructor(public dialog:MatDialog){}
+  constructor(public dialog:MatDialog,private bookService:BookService){}
 
-  openDialog(book:any):void{
-    this.dialog.open(ConfirmDialogComponent);
+  deleteBook(book:any){
+    const confirmDialog= this.dialog.open(ConfirmDialogComponent);
+    confirmDialog.afterClosed().subscribe(result=>{
+      if(result===true){
+        this.bookService.deleteBook(book);
+      }
+    });
+      
   }
 }

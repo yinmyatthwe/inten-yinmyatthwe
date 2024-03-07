@@ -26,12 +26,4 @@ import { BookData } from '../../types/book';
 
 })
 export class ConfirmDialogComponent {
-  
-  book=new BookData();
-
-  constructor(private bookService:BookService , public dialogRef: MatDialogRef<ConfirmDialogComponent>) {}
-
-  deleteBook(book:any){
-    this.bookService.deleteBook(book); 
-  }
 }
