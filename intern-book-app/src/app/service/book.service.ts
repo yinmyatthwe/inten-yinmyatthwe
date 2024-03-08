@@ -28,7 +28,14 @@ export class BookService {
     }
 
     deleteBook(bookData:any){
-        this.books.pop();
+        deleteBook(bookData:any){
+        const index = this.books.indexOf(bookData);
+        if (index !== -1) {
+        this.books.splice(index, 1);
+        }
+        this.messageService.add('Deleted Book');
+        return this.books;
+    }
         this.messageService.add('Deleted Book');
         return this.books;
     }
