@@ -1,0 +1,20 @@
+<br>
+<mat-card class = "card-width">
+<div *ngIf="messageService.messages.length">
+    <mat-card-header>
+        <mat-card-title>
+            ログ
+        </mat-card-title>
+    </mat-card-header>
+    
+    <mat-card-actions>
+        <button mat-raised-button type="button" class="clear"
+        (click)="messageService.clear()">Clear Logs</button>
+    </mat-card-actions>
+    
+    <div *ngFor='let message of messageService.messages'> 
+        <p>{{message}} </p> <br>
+    </div>
+
+</div>
+</mat-card>

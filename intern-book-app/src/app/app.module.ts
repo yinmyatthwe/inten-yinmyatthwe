@@ -11,7 +11,7 @@ import { BooklistComponent } from './pages/booklist/booklist.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule,Routes } from '@angular/router';
-
+import { MessageComponent } from './components/message/message.component';
 
 const routes:Routes=[
     {path:'',component:BooklistComponent}
@@ -19,6 +19,7 @@ const routes:Routes=[
 @NgModule({
 declarations: [
     AppComponent,
+    MessageComponent,
 ],
 imports: [
     BrowserModule,

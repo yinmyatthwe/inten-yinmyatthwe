@@ -6,6 +6,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { ToolbarComponent } from '../toolbar/toolbar.component';
 import { NgIf,NgFor } from '@angular/common';
+import { BookService } from '../../service/book.service';
 import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
 import { BookData } from '../../types/book';
 import {
@@ -39,7 +40,6 @@ import { Observable } from 'rxjs';
 
 export class BookinformationComponent {
   @Input() books=BOOKS;
-  
   book=new BookData();
   
   constructor(public dialog:MatDialog,private bookService:BookService){}
@@ -51,6 +51,6 @@ export class BookinformationComponent {
         this.bookService.deleteBook(book);
       }
     });
-      
+    
   }
 }
